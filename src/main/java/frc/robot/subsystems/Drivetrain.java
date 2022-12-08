@@ -8,6 +8,10 @@ public class Drivetrain extends SubsystemBase{
     private final DriveHalf drive_Left = new DriveHalf("Left", DriveConstants.FrontLeftSparkMaxID, DriveConstants.RearLeftSparkMaxID);
     private final DriveHalf drive_Right = new DriveHalf("Right", DriveConstants.FrontRightSparkMaxID, DriveConstants.RearRightSparkMaxID);
 
+    public Drivetrain(){
+        configureDrive();
+    }
+    
     public void configureDrive(){
         drive_Right.setInverted();
     }
